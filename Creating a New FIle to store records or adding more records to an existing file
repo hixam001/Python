@@ -1,0 +1,28 @@
+def addFileSer():
+    #If a file doesnt exist,this code will create a new file and add records to it.
+    #If the file already exists this code will add more records to the file and not delete the previous records.
+
+    # sName as string
+    # sClass as string
+    # sFee as float
+
+    sName=""
+    sClass=""
+    sFee=0.0
+
+    sFile = open("sRec.txt",'at')
+
+    sName = input("Enter Name(Leave blank to exit..): ")
+
+    while sName != "":
+        sClass = input("Enter the class: ")
+        sFee = float(input("Enter the Fee amount: "))
+
+        sFile.write(sName + "\n")
+        sFile.write(sClass + "\n")
+        sFile.write(str(sFee) + "\n")
+
+        sName = input("Enter Name(Leave blank to exit..): ")
+
+    sFile.close()
+addFileSer()
