@@ -1,0 +1,48 @@
+from random import randint
+
+move = ["rock", "paper", "scissor"]
+computer_move = move[randint(0, 2)]
+player_count = 0
+computer_count = 0
+player_win = False
+computer_win = False
+count = 0
+
+while count in range(3) and player_win == False and computer_win == False:
+    player_move = input("ENTER YOUR MOVE: ")
+    if player_move == computer_move:
+        print("TIED!")
+        computer_count = computer_count
+        player_count = player_count
+    elif player_move == "scissor":
+        if computer_move == "rock":
+            print("COMPUTER WINS")
+            computer_count = computer_count + 1
+        elif computer_move == "paper":
+            print("PLAYER WINS")
+            player_count = player_count + 1
+    elif player_move == "paper":
+        if computer_move == "rock":
+            print("PLAYER WINS")
+            player_count = player_count + 1
+        elif computer_move == "scissor":
+            print("COMPUTER WINS")
+            computer_count = computer_count + 1
+    elif player_move == "rock":
+        if computer_move == "paper":
+            print("COMPUTER WINS")
+            computer_count = computer_count + 1
+        elif computer_move == "scissor":
+            print("PLAYER WINS")
+            player_count = player_count + 1
+    else:
+        print("WRONG INPUT")
+
+    if player_count > 1:
+        player_win = True
+    elif computer_count > 1:
+        computer_win = True
+if player_win= True:
+    print("PLAYER WON THE SERIES")
+elif computer_win= True:
+    print("COMPUTER WON THE SERIES")
