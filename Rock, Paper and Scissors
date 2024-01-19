@@ -1,3 +1,5 @@
+#A best of 3 Rock Paper Scissor Game Between a Computer and a Player#
+
 from random import randint
 
 move = ["rock", "paper", "scissor"]
@@ -42,7 +44,7 @@ while count in range(3) and player_win == False and computer_win == False:
         player_win = True
     elif computer_count > 1:
         computer_win = True
-if player_win= True:
+if player_win== True:
     print("PLAYER WON THE SERIES")
-elif computer_win= True:
+elif computer_win== True:
     print("COMPUTER WON THE SERIES")
